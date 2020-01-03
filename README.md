@@ -8,6 +8,9 @@ matrices of the same dimension -- is true.
 The program reads 'input.txt' file, which has to be written in the following format:
 
 \<matrices dimension\> \<try count\>
+
 \<A\>
+
 \<B\>
+
 \<C\>
