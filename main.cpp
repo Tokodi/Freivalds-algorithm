@@ -38,7 +38,7 @@ Vector Multiply(const Matrix& A, const Vector& V) {
     return resultPtr;
 }
 
-int randomNumber(int min, int max) {
+int GetRandomNumber(int min, int max) {
    static thread_local std::mt19937 generator(std::chrono::system_clock::now().time_since_epoch().count());
    std::uniform_int_distribution<int> distribution(min, max);
    return distribution(generator);
@@ -47,7 +47,7 @@ int randomNumber(int min, int max) {
 Vector GenerateRandomBinaryVector() {
     Vector binaryVector(dimension);
     for (auto& x : binaryVector) {
-        x = randomNumber(0, 1);
+        x = GetRandomNumber(0, 1);
     }
 
     return binaryVector;
